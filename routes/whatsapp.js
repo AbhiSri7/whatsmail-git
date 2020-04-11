@@ -27,6 +27,7 @@ router.route('/')
   .get((req,res,next) => {
     // res.render('whatsapp');
       res.sendFile(path.join(__dirname , '../public/whatsapp.html'));
+      console.log("heya");
       setTimeout( () => {process.exit();}, 1500);
   })
   .post(multerUpload.single('fileup'), (req, res, next) => {
