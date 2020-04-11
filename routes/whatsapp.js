@@ -27,8 +27,6 @@ router.route('/')
   .get((req,res,next) => {
     // res.render('whatsapp');
       res.sendFile(path.join(__dirname , '../public/whatsapp.html'));
-      console.log("heya");
-      setTimeout( () => {process.exit();}, 1500);
   })
   .post(multerUpload.single('fileup'), (req, res, next) => {
 
@@ -52,6 +50,7 @@ router.route('/')
             setTimeout(checkFlag, 1000); /* this checks the flag every 2000 milliseconds*/
           } else {
             res.write('QR Code can not be generated(maybe your connection is too slow).<br><br>Try Again.<br><br><input type="button" value="Home Page" onclick="window.location.href=`../index.html`"><br>');
+            setTimeout( () => {process.exit();}, 1500);
             return;
           }
       }
@@ -94,7 +93,8 @@ router.route('/')
                 setTimeout(checkFlag1, 2000); /* this checks the flag every 2000 milliseconds*/
               } else {
                 res.write('<br><br>Do not be late to scan the QR Code.<br>Go to main page and Try again.<br><br><input type="button" value="Home Page" onclick="window.location.href=`../index.html`">');
-                return;
+                setTimeout( () => {process.exit();}, 1500);
+                // return;
               }
             }
             try {
