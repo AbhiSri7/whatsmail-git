@@ -1,5 +1,5 @@
 {
-  "name": "pynodejs",
+  "name": "whatsmail",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -30,5 +30,11 @@
     "shortid": "^2.2.15",
     "util": "^0.12.2"
   },
-  "devDependencies": {}
+  "engines": {
+    "node": "13.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AbhiSri7/whatsmail-git.git"
+  }
 }
