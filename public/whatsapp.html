@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Enter details</title> 
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+	<link type="text/css" rel="stylesheet" href="/stylesheets/stylew.css" />
+	<link href='//fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
+
+</head>
+
+<body>
+
+	<form action="" method="POST" id="val" class="val" enctype="multipart/form-data" >
+        <label for="no_contacts">No. of contacts to send to:</label>
+		<input type="number" id="no_contacts" name="no_contacts" min="1" max="100" required><br><br>
+        Click to enter Recipient Numbers:<br>(Enter in format - 91976#######) <input type="button" id="create" value="Create"><br><br><hr align="left" width="30%"><br>
+		<div id="enter"></div><br>
+		<!-- <input type="button" id="send" value="Send Mails"> -->
+		<!-- <div id="result"></div> -->
+		<textarea id="message" name="message" cols="45" rows="10" required>Enter your message here</textarea><br><br><hr align="left" width="30%"><br>
+		<input type="submit" value="Send Messages"><br><br><hr align="left" width="30%">
+	  </form>
+
+	<script src="/javascripts/scriptw.js"></script>
+	
+
+</body>
+</html>
+

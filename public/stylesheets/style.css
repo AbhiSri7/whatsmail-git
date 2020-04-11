@@ -1,0 +1,19 @@
+body {
+  background-image: url("../images/email.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: #cccccc;
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+body {
+  font-weight: bold;
+  font-size: larger;
+  color: #24a0ed;
+}
+
+a {
+  color: #00B7FF;
+}

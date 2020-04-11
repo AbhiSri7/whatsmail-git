@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Enter details</title> 
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+	<link type="text/css" rel="stylesheet" href="./stylesheets/style.css" />
+	<link href='//fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
+
+</head>
+
+<body>
+
+	<form action="" method="POST" id="val" class="val" enctype="multipart/form-data" >
+		<label for="sender">Sender's Email:</label>
+		<input type="email" id="sender" name="sender" required><br><br>
+		<label for="sender_p">Sender's Email Password:</label>
+		<input type="password" id="sender_p" name="sender_p" required><br><br>
+		<label for="no_emails">No. of Recipient Emails:</label>
+		<input type="number" id="no_emails" name="no_emails" min="1" max="100" required><br><br>
+		Click to enter Recipient Mails: <input type="button" id="create" value="Create"><br><br><hr align="left" width="40%"><br>
+		<div id="enter"></div><br>
+		<label for="subject">Subject of Email:</label>
+		<input type="text" id="subject" name="subject" size="35" required><br><br>
+		<!-- <input type="button" id="send" value="Send Mails"> -->
+		<!-- <div id="result"></div> -->
+		<textarea id="mail" name="mail" cols="55" rows="10" required>Enter mail here</textarea><br><br><hr align="left" width="40%"><br>
+		Attachment file(if any): <input type="file" name="fileup" id="fileup" value="Choose File"><br><br><hr align="left" width="40%"><br>
+		<input type="submit" value="Send Mails"><br><br><hr align="left" width="40%">
+	  </form>
+
+	  
+
+	<script src="./javascripts/script.js"></script>
+	
+
+</body>
+</html>
+

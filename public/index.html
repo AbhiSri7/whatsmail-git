@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Welcome</title> 
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+	<!-- <link type="text/css" rel="stylesheet" href="./stylesheets/style.css" /> -->
+	<link href='//fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+
+	<script>
+		function w3_open() {
+			var x = document.getElementById("mySidebar");
+			x.style.width = "100%";
+			x.style.fontSize = "40px";
+			x.style.paddingTop = "10%";
+			x.style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+			}
+	</script>
+
+</head>
+<body>
+
+	<!-- Side Navigation -->
+	<nav class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-center" style="display:none" id="mySidebar">
+		<h1 class="w3-xxxlarge w3-text-theme">Hello there!</h1>
+		<button class="w3-bar-item w3-button" onclick="w3_close()"><small>Close</small> <i class="fa fa-remove"></i></button>
+		
+		About the developer<br>
+		<a href="https://www.linkedin.com/in/abhishek-srivastav-b55438199/" target="_blank" class="w3-bar-item w3-button"><i class="fa fa-linkedin w3-margin-bottom w3-text-theme" style="font-size:50px"></i></a>
+		<a href="https://github.com/AbhiSri7" target="_blank" class="w3-bar-item w3-button"><i class="fa fa-github w3-margin-bottom w3-text-theme" style="font-size:50px"></i></a>
+		<a href="mailto:abhisrivastav551@gmail.com" class="w3-bar-item w3-button"><i class="fa fa-envelope-o w3-margin-bottom w3-text-theme" style="font-size:50px"></i></a>
+		<a href="https://www.instagram.com/sri.abhi_07/" target="_blank" class="w3-bar-item w3-button"><i class="fa fa-instagram w3-margin-bottom w3-text-theme" style="font-size:50px"></i></a>
+		
+	</nav>
+
+	<!-- Header -->
+	<header class="w3-container w3-theme w3-padding" id="myHeader">
+		<i onclick="w3_open()" class="fa fa-bars w3-xlarge w3-button w3-theme"></i> 
+		<div class="w3-center">
+		<h4>Greetings</h4>
+		<h2 class="w3-xxxlarge w3-animate-bottom">Want to Send WhatsApp messages or Emails?</h2>
+		  <div class="w3-padding-32">
+			<form action="/whatsapp">
+				<button class="w3-btn w3-xlarge w3-theme-dark w3-hover-teal" style="font-weight:700;" style="font-weight:700;">WhatsApp</button>
+			</form>
+		  </div>
+		  <div class="w3-padding-32">
+			<form action="/emails">
+				<button class="w3-btn w3-xlarge w3-theme-dark w3-hover-teal" style="font-weight:700;">Email</button>
+			</form>
+		  </div>
+		</div>
+		<br>
+	  </header>
+
+
+	  <div class="w3-row-padding w3-center w3-margin-top">
+		<div class="w3-third">
+		  <div class="w3-card w3-container" style="min-height:460px">
+		  <h2>WhatsApp</h2><br>
+		  <i class="fa fa-whatsapp w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+		  <p>Built-in responsiveness</p>
+		  <p>Send messages to multiple contacts at a time</p>
+		  <p>No need to save contacts first</p>
+		  </div>
+		</div>
+		
+		<div class="w3-third">
+		  <div class="w3-card w3-container" style="min-height:460px">
+		  <h2>Emails</h2><br>
+		  <i class="fa fa-envelope w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+		  <p>Send multiple emails at a time</p>		  
+		  <p>Supports gmail, outlook, hotmail and yahoo domains at the sender end</p>
+		  <p>Supports all domains at the receiver end</p>
+		  </div>
+		</div>
+		
+		<div class="w3-third">
+			<div class="w3-card w3-container" style="min-height:460px">
+			<h2>Design</h2><br>
+			<i class="fa fa-diamond w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+			<p>Fits any screen sizes</p>
+			<p>User friendly interface</p>
+			<p>Developed by your learner friend <3</p>
+			</div>
+		  </div>
+		  </div>
+
+	
+	
+
+</body>
+</html>
+
