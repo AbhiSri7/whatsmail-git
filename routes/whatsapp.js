@@ -131,7 +131,7 @@ router.route('/')
                 return;
               }
               if(wbm.t[j] == 0) {
-                res.write("");
+                res.write("h");
                 setTimeout(checkFlag3, 2000); /* this checks the flag every 2000 milliseconds*/
               } else if(wbm.t[j] == 1){
                   j++;
