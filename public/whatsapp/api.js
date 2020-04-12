@@ -118,9 +118,10 @@ async function generateQRCode() {
         
         let image = qr_image.imageSync(qrcodeData, { type: 'png' });
         try {
-            fs.writeFile('./public/whatsapp/qrcodes/' + id + '.png', image, err => {
+            var filename = path.join(__dirname , '/qrcodes/');
+            fs.writeFile(filename + id + '.png', image, err => {
                 if (err) {
-                res.render('Error');
+                console.log('Error_fs.write');
                 } else {
                 console.log('ready...');
                 }

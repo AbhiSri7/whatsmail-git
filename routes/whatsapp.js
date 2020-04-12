@@ -64,6 +64,9 @@ router.route('/')
         if(wbm.t[j] == 0) {
           res.write(" ");
           setTimeout(checkFlagtest, 2000); /* this checks the flag every 2000 milliseconds*/
+          if(j==req.body.no_contacts + 3){
+            console.log("done");
+          }
         } else {
         }
       }
@@ -82,16 +85,18 @@ router.route('/')
               await wbm.end();
           }).catch(err => console.log(err));
       })();
-      
-      chokidar.watch('./public/whatsapp/qrcodes', {ignored: /[\/\\]\./}).on('all', function(event, path1) {
+     
+      var filename = path.join(__dirname, '../public/whatsapp/qrcodes');
+      var filename2 = path.join(__dirname, '../public/whatsapp/qrcodes/');
+      chokidar.watch(filename, {ignored: /[\/\\]\./}).on('all', function(event, path1) {
           console.log(event, path1); 
-          if(path1 == 'public/whatsapp/qrcodes/' + wbm.id + '.png' && event == 'add'){
+          if(path1 == filename2 + wbm.id + '.png' && event == 'add'){
             res.write("<img src='" + '/whatsapp/qrcodes/' + wbm.id + '.png' + "'/>");
 
             
            setTimeout( () => {
             try {
-              fs.unlinkSync('public/whatsapp/qrcodes/' + wbm.id + '.png');
+              fs.unlinkSync(filename2 + wbm.id + '.png');
             } catch (error) {
               console.log("NVM");
               res.write('<br><br><h2>There was some error!</h2><br>Logout in your device and Try Again.<br><br></h1><input type="button" value="Home Page" onclick="window.location.href=`../index.html`">');     
