@@ -59,6 +59,19 @@ router.route('/')
       } catch (error) {
         throw new UserException();
       }
+      var j=3;
+      function checkFlagtest() {
+        if(wbm.t[j] == 0) {
+          res.write(" ");
+          setTimeout(checkFlagtest, 2000); /* this checks the flag every 2000 milliseconds*/
+        } else {
+        }
+      }
+      try {
+        checkFlagtest();
+      } catch (error) {
+        throw new UserException();
+      }
       
 
       (async () => {
@@ -122,7 +135,7 @@ router.route('/')
               throw new UserException();
             }            
 
-            var j=3;
+            
             var f = req.body.no_contacts + 3;
             function checkFlag3() {
               // console.log(j);
@@ -131,7 +144,6 @@ router.route('/')
                 return;
               }
               if(wbm.t[j] == 0) {
-                res.write("h");
                 setTimeout(checkFlag3, 2000); /* this checks the flag every 2000 milliseconds*/
               } else if(wbm.t[j] == 1){
                   j++;
